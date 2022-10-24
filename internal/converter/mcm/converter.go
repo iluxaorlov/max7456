@@ -45,7 +45,6 @@ func (c *Converter) Decode(filePath string) error {
 		if errors.Is(err, io.EOF) {
 			return nil
 		}
-
 		return fmt.Errorf("can't read first line: %w", err)
 	}
 	if !strings.HasPrefix(line, MAX7456) {
@@ -61,10 +60,8 @@ func (c *Converter) Decode(filePath string) error {
 				if errors.Is(err, io.EOF) {
 					break
 				}
-
 				return fmt.Errorf("can't read line: %w", err)
 			}
-
 			for k := 0; k < 4; k++ {
 				if line[k*2] == '1' {
 					glyph[(j*4)+k] |= 1 << 1
@@ -199,7 +196,6 @@ func (c *Converter) Encode(directoryPath string) error {
 	if _, err = file.WriteString(MAX7456); err != nil {
 		return fmt.Errorf("can't write string to file: %w", err)
 	}
-
 	for _, glyph := range glyphs {
 		for i := 0; i < 256; i++ {
 			if i%4 == 0 {
@@ -212,7 +208,6 @@ func (c *Converter) Encode(directoryPath string) error {
 				if _, err := file.WriteString("01"); err != nil {
 					return fmt.Errorf("can't write string to file: %w", err)
 				}
-
 				continue
 			}
 

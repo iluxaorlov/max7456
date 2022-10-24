@@ -9,14 +9,14 @@ Fetch the [latest release](https://github.com/iluxaorlov/max7456/releases) for y
 ### Darwin
 
 ```shell
-sudo curl -L https://github.com/iluxaorlov/max7456/releases/download/v1.0.0/max7456-darwin-64 -o /usr/local/bin/max7456
+sudo curl -L https://github.com/iluxaorlov/max7456/releases/download/v1.0.1/max7456-darwin-64 -o /usr/local/bin/max7456
 sudo chmod +x /usr/local/bin/max7456
 ```
 
 ### Linux
 
 ```shell
-sudo wget https://github.com/iluxaorlov/max7456/releases/download/v1.0.0/max7456-linux-64 -O /usr/local/bin/max7456
+sudo wget https://github.com/iluxaorlov/max7456/releases/download/v1.0.1/max7456-linux-64 -O /usr/local/bin/max7456
 sudo chmod +x /usr/local/bin/max7456
 ```
 
