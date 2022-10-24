@@ -1,4 +1,4 @@
-# MAX7456
+# MAX7456 converter
 
 Allows you to convert *.mcm font file into an image collection. You can then edit and convert the image collection back to *.mcm file.
 
